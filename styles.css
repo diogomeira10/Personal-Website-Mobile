@@ -54,11 +54,13 @@ nav a {
 }
 
 .introduction {
+    position:relative;
     min-height: 30vh;
     display:flex;
     flex-direction:column;
     justify-content: center;
     align-items:center;
+    text-align:center;
 }
 
 .introduction h1 {
@@ -150,9 +152,7 @@ nav a {
     margin-bottom: 2em;
 }
 
-.my-work img {
-    max-width: 30%;
-}
+
 
 .container {
     display:flex;
@@ -167,7 +167,8 @@ nav a {
     height:10em;
     border: 2px solid var(--primary);
     border-radius: 1em;
-    padding: 1em;
+    padding-top: 0.2em;
+    
     margin-bottom: 1em;
     text-align:center;
     position:relative;
@@ -186,9 +187,50 @@ nav a {
     margin-top: 1em;
 }
 
-.contact-me {
-
+.car-image {
+    position:absolute;
+    max-width: 80%;
+    left: 0.6em;
 }
+
+.book-image {
+    position:absolute;
+    max-width: 8em;
+    right: 0.1em;
+    top: 1.5em;
+}
+
+.movie-and-song-image {
+    position: absolute;
+    max-width: 50%;
+    left: 2.2em;
+    top: 3.5em;
+}
+
+.pictures-image {
+    max-width: 100%;
+    position:absolute;
+    left: 0.1em;
+    top: 2em;
+}
+
+.animals-image {
+    max-width: 90%;
+    position:absolute;
+    left: 0.4em;
+    top: 2.5em;
+}
+
+.Apps-image {
+    max-width: 80%;
+    position:absolute; 
+    left: 0.8em;
+    top:2.5em;
+}
+
+.contact-me {
+    min-height: 35vh;
+}   
 
 .contact-title {
     text-align:center;
@@ -205,8 +247,45 @@ nav a {
     font-weight: normal;
 }
 
+form {
+    margin: 0 2em;
+}
+
+form input {
+    border: none;
+    border-bottom: 1px solid var(--primary);
+    margin-bottom: 1em;
+}
+
+form input::placeholder {
+    font-size: 0.9em;
+}
+
+.input-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.message {
+    width:100%;
+}
+
+.message input {
+    width: 100%;
+}
+
+.submit-div {
+    text-align:center;
+    font-weight: bold;
+}
 
 
+/* body font-size: 16px;
+2em = 32px;
+ */
 
 
 
@@ -216,7 +295,38 @@ nav a {
 
 /* small tablet styles */
 @media screen and (min-width: 620px) {
+    .expertise-column {
+        min-height: 30em;
+    }
 
+    .app {
+        width: 10em;
+    }
+
+    .car-image {
+        max-width:70%;
+        left: 1.5em;
+        top: 2.2em;
+    }
+
+    .book-image {
+        max-width:9em;
+        left: 0.5em;
+    }
+
+    .movie-and-song-image {
+        left: 2.7em;
+    }
+
+    .pictures-image {
+        top: 1em;
+    }
+
+    .animals-image {
+        max-width: 80%;
+        left: 1em;
+        top: 2em;
+    }
 }
 
 /* large tablets & laptop styles */
