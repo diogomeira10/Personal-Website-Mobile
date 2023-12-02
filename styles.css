@@ -83,6 +83,8 @@ nav a {
     color:white;
     background-color: var(--primary);
     text-align: center;
+    
+    
 }
 
 .about-me h2 {
@@ -98,6 +100,7 @@ nav a {
 .about-me p {
     font-size: 0.9em;
     margin-bottom: 0.7em;
+    
 }
 
 .expertise img {
@@ -106,15 +109,19 @@ nav a {
 
 .expertise {
     margin: 0 0.5em;
-    min-height: 45vh;
+    height: 45vh;
+    position: relative;
+    
 }
 
 .expertise-container {
+   
+    transform: translateY(-30%);
     display: flex;
     justify-content: space-between;
-    position:absolute;
-    top: 60em;
-
+    width: 100%; 
+    
+   
 }
 
 .expertise-column {
@@ -124,6 +131,8 @@ nav a {
     margin:0 0.5em;
     padding: 0 0.5em;
     background-color: white;
+
+ 
 }
 
 .expertise-column h4,
@@ -244,6 +253,7 @@ nav a {
 .contact-title h3 {
     font-size: 1em;
     margin-top: 1em;
+    margin-bottom: 3em;
     font-weight: normal;
 }
 
@@ -295,6 +305,17 @@ form input::placeholder {
 
 /* small tablet styles */
 @media screen and (min-width: 620px) {
+
+
+
+    .about-me {
+        padding: 0 3em;
+    }
+
+    .about-me h2 {
+        margin-bottom: 2em;
+    } 
+
     .expertise-column {
         min-height: 30em;
     }
@@ -327,10 +348,64 @@ form input::placeholder {
         left: 1em;
         top: 2em;
     }
+
+    .Apps-image {
+        max-width: 70%;
+        left: 1.5em;
+    }
 }
 
 /* large tablets & laptop styles */
 @media screen and (min-width: 960px) {
+    .about-me {
+        padding: 0 10em;
+    }
+
+    .about-me h2 {
+        font-size: 2em;
+    }
+
+    .about-me p {
+        margin-bottom: 2em;
+    }
+
+    .expertise {
+        margin-bottom: 3em;
+    }
+
+    .app {
+        width: 16em;
+        height: 16em;
+    }
+
+    .car-image {
+        left: 2.5em;
+    }
+
+    .book-image {
+        max-width: 14em
+    }
+
+    .movie-and-song-image {
+        left: 4em;
+    }
+
+    .Apps-image {
+        left: 2.2em;
+        top: 3em;
+    }
+
+    .contact-me {
+        min-height: 40vh;
+        margin-top: 6em;
+        margin-left: 4em;
+        margin-right: 4em;
+
+    }
+
+    form input {
+        margin-bottom: 3em;
+    }
 
 }
 
