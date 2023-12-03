@@ -9,6 +9,7 @@ padding: 0;
 text-decoration: none;
 box-sizing: border-box;
 font-family: 'Montserrat', sans-serif;
+scroll-behavior: smooth;
 }
 
 
@@ -30,11 +31,16 @@ h2 {
     padding: 0.3em;
     color: var(--primary);
     transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 0.5em
 }
 
 .button:hover {
     background-color: var(--primary);
     color: white;
+}
+
+.submit-button:hover {
+    cursor:pointer
 }
 
 /* fonts */
@@ -119,14 +125,14 @@ nav a {
     transform: translateY(-30%);
     display: flex;
     justify-content: space-between;
-    width: 100%; 
+    max-width: 100%; 
     
    
 }
 
 .expertise-column {
     text-align:center;
-    border: 2px solid grey;
+    border: 2px solid rgb(146, 161, 161);
     border-radius: 0.8em;
     margin:0 0.5em;
     padding: 0 0.5em;
@@ -151,12 +157,12 @@ nav a {
 }
 
 .my-work-title h2 {
-    font-size: 1.7em;
+    font-size: 3em;
     margin-bottom: 1em;
 }
 
 .my-work-title h3 {
-    font-size: 0.9em;
+    font-size: 1.3em;
     font-weight: normal;
     margin-bottom: 2em;
 }
@@ -174,7 +180,7 @@ nav a {
 .app {
     width: 8em;
     height:10em;
-    border: 2px solid var(--primary);
+    border: 3px solid var(--primary);
     border-radius: 1em;
     padding-top: 0.2em;
     
@@ -265,6 +271,7 @@ form input {
     border: none;
     border-bottom: 1px solid var(--primary);
     margin-bottom: 1em;
+    outline: none
 }
 
 form input::placeholder {
@@ -304,12 +311,24 @@ form input::placeholder {
 
 
 /* small tablet styles */
+@media screen and (min-width: 330px) {
+    .about-me {
+        min-height: 85vh;
+    }
+
+    .my-work-button {
+        margin-bottom: 3em;
+    }
+}
+
+
 @media screen and (min-width: 620px) {
 
 
 
     .about-me {
         padding: 0 3em;
+        min-height: 60vh;
     }
 
     .about-me h2 {
@@ -410,6 +429,136 @@ form input::placeholder {
 }
 
 /* desktop styles */
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1600px) {
 
+    .introduction h1 {
+        font-size: 2.5em;
+    }
+
+    .introduction h2 {
+        font-size: 1.5em;
+        font-weight: normal;
+    }
+
+    .introduction img {
+        max-width: 20%;
+    }
+
+    .about-me {
+        padding: 0 30em;
+        min-height: 80vh;
+    }
+
+    .about-me h2 {
+        padding-top: 2em;
+        font-size: 3em;
+    }
+
+    .about-me p {
+        font-size: 1em;
+    }
+
+    .expertise {
+        height: 80vh;
+    }
+
+    .expertise-container {
+       margin: 0 17em;
+       transform: translateY(-15%)
+    }
+
+    .expertise-column {
+        min-height: 80vh;
+        padding: 0 4em;
+    }
+
+    .expertise-column > * {
+        margin-bottom: 4em;
+    }
+
+    .expertise-column img {
+        margin-top: 2em;
+    }
+
+    .my-work {
+        margin: 0 10em;
+    }
+
+    .my-work-title {
+        margin-bottom: 4em;
+    }
+
+    .app {
+        width: 25em;
+        height: 25em;
+        margin-bottom: 2em;
+        transition: all 0.3s ease;
+    }
+
+    .app  h3 {
+        margin-top: 1.5em
+    }
+
+    .app:hover{
+        padding: 3em;
+        font-weight: bold;
+        color:#6E07F3;
+        line-height: 2em;
+        
+    }
+
+    .app:hover p {
+        opacity: 1;
+        transition: opacity 0.3s ease;
+    }
+    
+    .app:hover img {
+        opacity: 0.2
+    }
+    
+    .app:hover h3 {
+        opacity: 0
+    }
+
+    .car-image {
+        left:4em;
+        top:4em;
+    }
+
+    .movie-and-song-image {
+        top: 6em;
+        left: 6.5em;
+    }
+
+    .book-image {
+        max-width: 90%;
+    }
+
+    .animals-image {
+        left: 2.5em;
+        top: 2.5em;
+    }
+
+    .Apps-image {
+        top: 5em;
+        left: 3.5em;
+    }
+
+    .contact-me {
+        padding: 0 20em;
+        min-height: 50vh;
+    }
+
+    .contact-title {
+        margin-bottom: 6em;
+    }
+
+    .input-container {
+        font-size: 1em;
+    }
+
+    form input::placeholder {
+        font-size:1em;
+    }
+    
 }
